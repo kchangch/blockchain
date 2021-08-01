@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/kidjouchang/Desktop/CMPT383/AS3/target/rls/debug/build/typenum-dedd167775007539/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/Users/kidjouchang/Desktop/CMPT383/AS3/target/rls/debug/build/typenum-dedd167775007539/out/op.rs

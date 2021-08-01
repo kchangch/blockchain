@@ -1,0 +1,5 @@
+1. We need to do this so once a worker finish its calculations, it can send the result back to the main thread. If we don't use a Send as output, we cannot communicate the results through the channel back to the main thread.
+
+2. Because we are dealing with threads and we don't want any worker to keep making calculations once we get the desired result. Therefore, but draining, we clear all workers at once. If we use .iter(), while waiting for one worker to finish, another worker might be doing useless calculations.
+
+3. We use .clone because we are using the same reference to the original block in different workers. We don't use Arc<&Block> because we want to make it thread safe.
